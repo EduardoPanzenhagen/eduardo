@@ -1,0 +1,72 @@
+const botoes = document.querySelectorAll("button");
+
+botoes.forEach(function (botao) {
+    let curtiu = false;
+    botao.addEventListener("click", botaoClicado);
+    function botaoClicado() {
+        console.log("fui clicado");
+        let texto = botao.querySelector("span");
+        if (curtiu === false) {
+            texto.textContent++;
+            curtiu = true;
+        } else {
+            texto.textContent--;
+            curtiu = false;
+        }
+    }
+});<article>
+    <img src="imagem-blog.png" 
+         alt="Descrição da imagem para acessibilidade">
+    <div>
+        <h2>Título da Nova Curiosidade</h2>
+        <p class="artigo-autor">Por: Nome do Autor</p>
+        <p>Texto da curiosidade tecnológica aqui.</p>
+        <button>❤️<span>0</span></button>
+        <button>��<span>0</span></button>
+    </div>
+</article><p>
+Primeira parte do texto sobre computação.
+<br><br>
+Segunda parte do texto, que agora aparece em uma nova linha.
+</p><p class="artigo-fonte">Fonte: The National Museum of Computing</p>
+<!-- Exemplo de href para arquivo e rel -->
+<link rel="stylesheet" href="style.css">
+
+<!-- Exemplo de src para scripts -->
+<script src="script.js"></script>:root {
+    --cor-primaria: #183C63;
+    --cor-secundaria: #3782d2;
+    --cor-fundo: #ffffff;
+    --cor-texto: #151428;
+    --cor-contraste: #f3eef7;
+    --cor-botao: #f9f9f9;
+}header {
+    background-color: var(--cor-primaria);
+}
+
+main {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}.btn-tema-escuro {
+    position: fixed;
+    bottom: 16px; /* Distância da borda de baixo */
+    right: 16px;  /* Distância da borda da direita */
+    font-size: 32px; /* Tamanho do emoji */
+    padding: 12px;   /* Espaço interno entre o emoji e a borda */
+    background-color: var(--cor-primaria); /* Cor de fundo usando nossa variável */
+    border-radius: 50%; /* Deixa o botão perfeitamente redondo */
+    border: none; /* Remove a borda padrão do botão */
+    cursor: pointer; /* Muda o mouse para a "mãozinha" ao passar por cima */
+}function mudaTema() {
+    const corpoPagina = document.body;
+
+    if (corpoPagina.classList.contains("tema-escuro")) {
+        corpoPagina.classList.remove("tema-escuro");
+    } else {
+        corpoPagina.classList.add("tema-escuro");
+    }
+}article {
+    display: flex;
+    /* x-offset | y-offset | blur-radius | color (com transparência) */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
